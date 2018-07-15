@@ -34,6 +34,7 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   neighborhoods.forEach(neighborhood => {
     const option = document.createElement("option");
     option.innerHTML = neighborhood;
+    option.role = "menuitem";
     option.value = neighborhood;
     select.append(option);
   });
@@ -63,6 +64,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
   cuisines.forEach(cuisine => {
     const option = document.createElement("option");
     option.innerHTML = cuisine;
+    option.role = "menuitem";
     option.value = cuisine;
     select.append(option);
   });
@@ -167,10 +169,13 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 createRestaurantHTML = restaurant => {
   const li = document.createElement("li");
 
+  li.role = "navigation";
+
   const image = document.createElement("img");
   image.className = "restaurant-img";
   image.alt = restaurant.name;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.tabindex="0"
   li.append(image);
 
   const name = document.createElement("h1");
@@ -187,6 +192,7 @@ createRestaurantHTML = restaurant => {
 
   const more = document.createElement("a");
   more.innerHTML = "View Details";
+  more.title = `Click here to get more information and comments on ${resturant.name}`
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more);
 
