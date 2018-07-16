@@ -166,6 +166,8 @@ nav h1 a {
 #restaurants-list {
   display: flex;
   flex-wrap: wrap;
+	align-items: center;
+  justify-content: center;
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
@@ -192,7 +194,7 @@ nav h1 a {
 
 .restaurant-img {
 	padding-top: 10px;
-	width: 100%;
+	min-width: 100%;
 	height: auto;
 }
 
