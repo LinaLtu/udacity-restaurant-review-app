@@ -201,11 +201,9 @@ nav h1 a {
 }
 
 .detailed-restaurant-img {
-	width: 80%;
+	width: 90%;
 	text-align: center;
 	margin: 0 auto;
-
-
 }
 
 
@@ -293,7 +291,7 @@ nav h1 a {
 #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
+  padding: 140px 30px 10px;
   width: 50%;
 
 }
@@ -365,6 +363,6 @@ nav h1 a {
 	}
 
 	#map-container, #restaurant-container, #reviews-container {
-		  /* flex: 2; */
+		  flex: 2;
 	}
 }
