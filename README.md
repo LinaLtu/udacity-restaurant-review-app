@@ -4,7 +4,7 @@
 
 Responsive Restaurant Review App is a project required to complete Udacity Front-End Development Nanodegree Program. The goal of the project is to convert a static webpage to a mobile-ready web application, make it accessible for screen reader use and add a service worker to begin the process of creating a seamless offline experience for the users.
 
-### How to Start the Application:
+## How to Start the Application:
 
 To load the map, you will need a [Mapbox](https://www.mapbox.com/) key. You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information.
 
