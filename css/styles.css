@@ -241,20 +241,17 @@ nav h1 a {
   width: 100%;
   z-index: 1000;
 }
+.inside #maincontent {
+  margin-top: 131px;
+}
 .inside #map-container {
   background: blue none repeat scroll 0 0;
   height: auto;
-  margin-top: 10%;
-  /* position: fixed;
-  right: 0;
-  top: 80px; */
-
-  width: 50%;
 }
 .inside #map {
   background-color: #ccc;
-  height: 100%;
-  width: 100%;
+  /* height: 400px;
+  width: 100%; */
 }
 .inside #footer {
   bottom: 0;
@@ -285,19 +282,31 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-  width: 90%;
 }
 #restaurant-container,
 #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 30px 10px;
+  padding: 30px 10px 10px 10px;
   width: 50%;
   box-sizing: border-box;
 }
 
+.inside #restaurant-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#filter-content {
+  order: 2;
+}
+
 #map-container {
   order: 2;
+  width: 100%;
 }
 
 #restaurant-container {
@@ -353,9 +362,13 @@ nav h1 a {
     width: 80%;
   }
 
+  #restaurants-list li {
+    padding: 0;
+  }
+
   #map-container {
-    margin-top: 18%;
-    margin-right: 10%;
+    /* margin-top: 18%; */
+    /* margin-right: 10%; */
     flex-direction: column;
   }
 
@@ -375,6 +388,10 @@ nav h1 a {
     order: 3;
     width: 100%;
   }
+
+  .restaurant-img {
+    padding: 0;
+  }
 }
 
 @media only screen and (max-width: 899px) and (min-width: 600px) {
@@ -391,7 +408,7 @@ nav h1 a {
 
   #map-container {
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
   }
 }
 
@@ -416,5 +433,46 @@ nav h1 a {
   #map-container {
     width: 100%;
     height: 500px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .inside {
+    height: 1800px;
+    width: 1200px;
+  }
+
+  .inside #maincontent {
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 100%;
+    overflow: auto;
+    align-content: flex-start;
+  }
+
+  .inside #map-container {
+    align-self: flex-start;
+    margin: 0;
+    width: 45%;
+    height: 1600px;
+    order: 3;
+  }
+
+  .inside #map {
+    height: 1600px;
+  }
+
+  .inside #restautant-container {
+    align-self: flex-start;
+    margin: 0;
+    width: 45%;
+    order: 1;
+  }
+
+  .inside #reviews-container {
+    align-self: flex-start;
+    margin: 0;
+    width: 45%;
+    order: 2;
   }
 }
