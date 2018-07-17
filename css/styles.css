@@ -248,6 +248,7 @@ nav h1 a {
 .inside #map-container {
   background: blue none repeat scroll 0 0;
   height: auto;
+	margin-top: 10%;
   /* position: fixed;
   right: 0;
   top: 80px; */
@@ -313,13 +314,7 @@ nav h1 a {
 		order: 3
 	}
 
- #map-container, #restaurant-container, #reviews-container {
-	 /* flex: 1; */
-}
 
-/* #map-container {
-	width: 30%;
-} */
 #reviews-container {
   padding: 30px 40px 80px;
 }
@@ -357,6 +352,28 @@ nav h1 a {
 		#reviews-list li, #restaurant-hours  {
 			width: 80%;
 		}
+
+		#map-container {
+			margin-top: 15%;
+			flex-direction: column;
+		}
+
+
+		 #map-container {
+			 order: 1;
+			 width: 100%
+		 }
+
+		  #restaurant-container {
+				order: 2;
+				 width: 100%;
+			}
+
+			#reviews-container {
+				order: 3;
+				 width: 100%;
+			}
+
 }
 
 
