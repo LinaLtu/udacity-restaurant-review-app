@@ -1,4 +1,4 @@
-@charset "utf-8";
+/* @charset "utf-8";
 /* CSS Document */
 
 body,
@@ -58,9 +58,11 @@ section {
 #maincontent {
 	display: flex;
 	flex-wrap: wrap;
-	 flex-direction: column;
+	flex-direction: row;
+	height: auto;
+	width: 100%;
   background-color: #f3f3f3;
-  min-height: 100%;
+
 }
 #footer {
   background-color: #444;
@@ -95,7 +97,8 @@ nav h1 a {
   background-color: #eee;
   font-size: 17px;
   margin: 0;
-  width: calc(50% - 80px);
+  /* width: calc(50% - 80px); */
+	width: 100%;
 }
 
 /* Display list items side by side */
@@ -244,10 +247,11 @@ nav h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
-  position: fixed;
+  height: auto;
+  /* position: fixed;
   right: 0;
-  top: 80px;
+  top: 80px; */
+
   width: 50%;
 }
 .inside #map {
@@ -293,13 +297,29 @@ nav h1 a {
   border-top: 1px solid #fff;
   padding: 140px 30px 10px;
   width: 50%;
+	box-sizing: border-box;
 
 }
 
-#map-container, #restaurant-container, #reviews-container {
-	 flex: 1 100%;
+ #map-container {
+	 order: 2
+ }
+
+  #restaurant-container {
+		order: 1
+	}
+
+	#reviews-container {
+		order: 3
+	}
+
+ #map-container, #restaurant-container, #reviews-container {
+	 /* flex: 1; */
 }
 
+/* #map-container {
+	width: 30%;
+} */
 #reviews-container {
   padding: 30px 40px 80px;
 }
@@ -353,6 +373,7 @@ nav h1 a {
 }
 
 @media only screen and (max-width: 655px) and (min-width: 460px) {
+
 	.filter-options, #restaurant-hours  {
 		height: 150px;
 	}
@@ -363,6 +384,13 @@ nav h1 a {
 	}
 
 	#map-container, #restaurant-container, #reviews-container {
-		  flex: 2;
+		  /* flex: 1; */
+	}
+
+	#maincontent {
+		width: 600px;
+		flex: 1;
+    width: 100%;
+		flex-direction: row;
 	}
 }
