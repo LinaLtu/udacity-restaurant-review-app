@@ -350,12 +350,6 @@ nav h1 a {
   color: #666;
 }
 
-@media only screen and (max-width: 1350px) and (min-width: 900px) {
-  #map-container {
-    margin-top: 15%;
-  }
-}
-
 @media only screen and (max-width: 899px) {
   #reviews-list li,
   #restaurant-hours {
@@ -439,7 +433,7 @@ nav h1 a {
 @media only screen and (min-width: 900px) {
   .inside {
     height: 1800px;
-    width: 1200px;
+    width: 100vw;
   }
 
   .inside #maincontent {
@@ -474,5 +468,10 @@ nav h1 a {
     margin: 0;
     width: 45%;
     order: 2;
+  }
+
+  .inside ul {
+    max-height: 750px;
+    overflow: auto;
   }
 }
