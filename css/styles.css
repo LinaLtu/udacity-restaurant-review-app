@@ -130,7 +130,7 @@ nav h1 a {
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
-  width: 100%;
+  min-width: 100%;
   height: 100px;
   padding: 10px;
   background-color: #3397db;
@@ -302,6 +302,7 @@ nav h1 a {
 
 #filter-content {
   order: 2;
+  width: 100%;
 }
 
 #map-container {
@@ -406,8 +407,11 @@ nav h1 a {
   }
 }
 
-@media only screen and (max-width: 655px) and (min-width: 460px) {
-  .filter-options,
+@media only screen and (max-width: 655px) and (min-width: 400px) {
+  .filter-options {
+    height: 150px;
+  }
+
   #restaurant-hours {
     height: 150px;
   }
@@ -426,7 +430,7 @@ nav h1 a {
 
   #map-container {
     width: 100%;
-    height: 500px;
+    height: 400px;
   }
 }
 
