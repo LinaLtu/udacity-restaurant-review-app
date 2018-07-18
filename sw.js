@@ -12,7 +12,7 @@ self.addEventListener("fetch", function(event) {
             return response;
           }
 
-          console.log("Fetching request from the network");
+          // console.log("Fetching request from the network");
 
           return fetch(event.request).then(function(networkResponse) {
             cache.put(event.request, networkResponse.clone());

@@ -1,29 +1,17 @@
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    const swUrl = `/sw.js`;
-
-    registerValidSW(swUrl);
+  window.addEventListener("load", function() {
+    navigator.serviceWorker.register("/sw.js").then(
+      function(registration) {
+        // Registration was successful
+        console.log(
+          "ServiceWorker registration successful with scope: ",
+          registration.scope
+        );
+      },
+      function(err) {
+        // registration failed
+        console.log("ServiceWorker registration failed: ", err);
+      }
+    );
   });
-}
-
-function registerValidSW(swUrl) {
-  navigator.serviceWorker
-    .register(swUrl)
-    .then(registration => {
-      registration.onupdatefound = () => {
-        const installingWorker = registration.installing;
-        installingWorker.onstatechange = () => {
-          if (installingWorker.state === "installed") {
-            if (navigator.serviceWorker.controller) {
-              console.log("New content is available; please refresh.");
-            } else {
-              console.log("Content is cached for offline use.");
-            }
-          }
-        };
-      };
-    })
-    .catch(error => {
-      console.error("Error during service worker registration:", error);
-    });
 }
