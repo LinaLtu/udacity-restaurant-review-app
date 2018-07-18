@@ -83,6 +83,7 @@ nav {
 nav h1 {
   margin: auto;
   padding-top: 1%;
+  padding-bottom: 2%;
 }
 nav h1 a {
   color: #fff;
